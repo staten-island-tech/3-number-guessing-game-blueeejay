@@ -21,7 +21,8 @@ greater than the random number
 letters at every wrong guess
 -When the user guesses correctly inform them and show them their guess
 history using a for loop """
-import random # allows me to use the random 
+
+import random # allows me to use the random thing to get a random number from my list. 
 guess_history = []
 pos = [1,2,3,4,5,6,7,8,9,10]
 rand = int(random.choice(pos)) 
@@ -34,5 +35,5 @@ while guess != rand:
         print("Guess lower!")
     elif guess < rand:
         print("Guess higher!") 
-    guess = input("Guess an integer from 1-10:12")
-print("Correct!")3
+    guess = input("Guess an integer from 1-10:")
+print("Correct!")
