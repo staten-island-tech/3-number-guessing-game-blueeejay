@@ -24,6 +24,7 @@ history using a for loop """
 
 import random # allows me to use the random thing to get a random number from my list. 
 guess_history = []
+x = 0
 pos = [1,2,3,4,5,6,7,8,9,10]
 rand = int(random.choice(pos)) 
 guess = int(input("Guess an integer from 1-10:"))
@@ -31,9 +32,16 @@ while guess != rand:
     guess_history.append(guess)
     print("Incorrect! You have guessed these numbers so far..")
     print(guess_history)
-    if guess > rand:
+    if guess > 10 or guess < 1:
+        print("This number is out of bounds!")
+    elif guess > rand:
         print("Guess lower!")
     elif guess < rand:
         print("Guess higher!") 
-    guess = input("Guess an integer from 1-10:")
+    guess = int(input("Guess an integer from 1-10:"))
 print("Correct!")
+print("You guessed previously..")
+
+for guesses in guess_history:
+    print(guess_history[0+x])
+    x = x + 1
